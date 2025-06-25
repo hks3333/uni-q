@@ -1,0 +1,156 @@
+2025-06-20 17:05:31,338 - INFO - Starting knowledge base update
+2025-06-20 17:05:31,339 - INFO - New files: ['chatbot_paper.pdf', 'robotics.pdf']
+2025-06-20 17:05:31,339 - INFO - Updated files: []
+2025-06-20 17:05:31,339 - INFO - Deleted files: []
+2025-06-20 17:05:31,344 - ERROR - Error updating knowledge base: Could not import sentence_transformers python package. Please install it with `pip install sentence-transformers`.
+2025-06-20 17:10:39,115 - INFO - Starting knowledge base update
+2025-06-20 17:10:39,115 - INFO - New files: ['chatbot_paper.pdf', 'robotics.pdf']
+2025-06-20 17:10:39,116 - INFO - Updated files: []
+2025-06-20 17:10:39,116 - INFO - Deleted files: []
+2025-06-20 17:11:01,699 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:11:06,900 - WARNING - File or metadata missing: chatbot_paper.pdf
+2025-06-20 17:11:06,900 - WARNING - File or metadata missing: robotics.pdf
+2025-06-20 17:11:06,900 - INFO - Knowledge base update completed successfully
+2025-06-20 17:11:06,904 - INFO - Starting knowledge base update
+2025-06-20 17:11:06,904 - INFO - New files: ['chatbot_paper.pdf', 'robotics.pdf']
+2025-06-20 17:11:06,904 - INFO - Updated files: []
+2025-06-20 17:11:06,904 - INFO - Deleted files: []
+2025-06-20 17:11:06,906 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:11:09,920 - WARNING - File or metadata missing: chatbot_paper.pdf
+2025-06-20 17:11:09,920 - WARNING - File or metadata missing: robotics.pdf
+2025-06-20 17:11:09,920 - INFO - Knowledge base update completed successfully
+2025-06-20 17:22:44,406 - INFO - Starting knowledge base update
+2025-06-20 17:22:44,407 - INFO - New files: ['robotics.pdf']
+2025-06-20 17:22:44,407 - INFO - Updated files: []
+2025-06-20 17:22:44,407 - INFO - Deleted files: []
+2025-06-20 17:22:56,367 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:23:01,255 - WARNING - File or metadata missing: robotics.pdf
+2025-06-20 17:23:01,255 - INFO - Knowledge base update completed successfully
+2025-06-20 17:29:44,601 - INFO - Starting knowledge base update
+2025-06-20 17:29:44,602 - INFO - New files: ['robotics.pdf']
+2025-06-20 17:29:44,602 - INFO - Updated files: []
+2025-06-20 17:29:44,602 - INFO - Deleted files: []
+2025-06-20 17:29:55,434 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:30:00,583 - ERROR - Error updating knowledge base: `pypdf` package not found, please install it with `pip install pypdf`
+2025-06-20 17:34:18,820 - INFO - Starting knowledge base update
+2025-06-20 17:34:18,821 - INFO - New files: ['Robotics.pdf']
+2025-06-20 17:34:18,821 - INFO - Updated files: []
+2025-06-20 17:34:18,821 - INFO - Deleted files: []
+2025-06-20 17:34:30,909 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:34:37,084 - INFO - Embedding 2048 chunks (filtered from original)...
+2025-06-20 17:35:55,349 - ERROR - Error updating knowledge base: Could not import faiss python package. Please install it with `pip install faiss-gpu` (for CUDA supported GPU) or `pip install faiss-cpu` (depending on Python version).
+2025-06-20 17:37:59,570 - INFO - Starting knowledge base update
+2025-06-20 17:37:59,570 - INFO - New files: ['Robotics.pdf']
+2025-06-20 17:37:59,570 - INFO - Updated files: []
+2025-06-20 17:37:59,570 - INFO - Deleted files: []
+2025-06-20 17:38:10,751 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:38:17,833 - INFO - Embedding 2048 chunks (filtered from original)...
+2025-06-20 17:39:22,248 - INFO - Loading faiss with AVX2 support.
+2025-06-20 17:39:22,675 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-20 17:39:22,684 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-20 17:39:22,767 - INFO - Saved updated FAISS index to faiss_index
+2025-06-20 17:39:22,768 - INFO - Knowledge base update completed successfully
+2025-06-20 17:46:16,661 - INFO - Starting knowledge base update
+2025-06-20 17:46:16,661 - INFO - New files: []
+2025-06-20 17:46:16,661 - INFO - Updated files: ['Robotics.pdf']
+2025-06-20 17:46:16,662 - INFO - Deleted files: []
+2025-06-20 17:46:16,662 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:46:20,691 - INFO - Loaded 2048 cached embeddings
+2025-06-20 17:46:20,792 - INFO - Saved updated FAISS index to faiss_index
+2025-06-20 17:46:20,792 - INFO - Knowledge base update completed successfully
+2025-06-20 17:46:20,816 - INFO - Starting knowledge base update
+2025-06-20 17:46:20,816 - INFO - New files: []
+2025-06-20 17:46:20,816 - INFO - Updated files: ['Robotics.pdf']
+2025-06-20 17:46:20,816 - INFO - Deleted files: []
+2025-06-20 17:46:20,818 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:46:24,530 - INFO - Loaded 2048 cached embeddings
+2025-06-20 17:46:25,083 - INFO - Saved updated FAISS index to faiss_index
+2025-06-20 17:46:25,084 - INFO - Knowledge base update completed successfully
+2025-06-20 17:57:00,550 - INFO - Starting knowledge base update
+2025-06-20 17:57:00,551 - INFO - New files: []
+2025-06-20 17:57:00,551 - INFO - Updated files: ['Conduct-for-Students.pdf']
+2025-06-20 17:57:00,551 - INFO - Deleted files: []
+2025-06-20 17:57:13,087 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:57:18,003 - INFO - Loading faiss with AVX2 support.
+2025-06-20 17:57:18,043 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-20 17:57:18,056 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-20 17:57:18,568 - INFO - Embedding 38 chunks (filtered from original)...
+2025-06-20 17:57:19,942 - INFO - Saved updated FAISS index to faiss_index
+2025-06-20 17:57:19,942 - INFO - Knowledge base update completed successfully
+2025-06-20 17:59:27,919 - INFO - Starting knowledge base update
+2025-06-20 17:59:27,920 - INFO - New files: ['computerfundamentals-e-notes.pdf']
+2025-06-20 17:59:27,920 - INFO - Updated files: []
+2025-06-20 17:59:27,920 - INFO - Deleted files: []
+2025-06-20 17:59:38,299 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-20 17:59:42,934 - INFO - Loading faiss with AVX2 support.
+2025-06-20 17:59:42,970 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-20 17:59:42,980 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-20 17:59:45,035 - INFO - Embedding 2684 chunks (filtered from original)...
+2025-06-20 18:01:05,629 - INFO - Saved updated FAISS index to faiss_index
+2025-06-20 18:01:05,630 - INFO - Knowledge base update completed successfully
+2025-06-21 00:58:12,415 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 00:58:18,130 - INFO - Loading faiss with AVX2 support.
+2025-06-21 00:58:18,577 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 00:58:18,589 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:00:09,119 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:01:10,405 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:03:26,319 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:03:31,854 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:03:31,904 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:03:31,914 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:04:39,914 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:04:46,058 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:04:46,090 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:04:46,100 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:06:23,074 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:06:28,972 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:06:29,010 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:06:29,024 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:07:37,528 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:07:42,291 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:07:42,319 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:07:42,327 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:13:17,542 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:13:24,045 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:13:24,126 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:13:24,135 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:13:55,301 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:22:20,673 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:22:26,454 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:22:26,484 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:22:26,492 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:23:12,398 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:23:17,939 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:23:17,962 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:23:17,968 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:23:34,908 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:25:18,954 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:26:08,569 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:31:04,983 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:36:59,725 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:37:05,527 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:37:05,562 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:37:05,572 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:39:34,744 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:39:41,069 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:39:41,114 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:39:41,126 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:39:53,817 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:40:00,439 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:40:00,473 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:40:00,481 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:42:09,313 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 01:43:24,155 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 01:43:29,892 - INFO - Loading faiss with AVX2 support.
+2025-06-21 01:43:29,923 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 01:43:29,933 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 01:43:30,561 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 13:41:47,758 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-21 13:41:54,298 - INFO - Loading faiss with AVX2 support.
+2025-06-21 13:41:54,767 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-21 13:41:54,779 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-21 13:42:13,952 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 13:45:46,639 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 13:46:07,696 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 13:47:10,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-21 13:58:09,811 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"

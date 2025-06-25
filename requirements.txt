@@ -1,0 +1,12 @@
+fastapi
+langchain
+langchain_community
+langchain-huggingface
+langchain-ollama
+pydantic
+requests
+streamlit
+uvicorn
+pymupdf
+httpx
+numpy

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Streamlit and FastAPI artifacts
+.ingestion_log.txt
+faiss_index/
+embed_cache/
+documents/
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+
+# Misc
+*.log
+*.sqlite3
+*.db
+
+# VSCode
+.vscode/ 
