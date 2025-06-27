@@ -154,3 +154,55 @@
 2025-06-21 13:46:07,696 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 2025-06-21 13:47:10,579 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
 2025-06-21 13:58:09,811 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-25 23:59:46,402 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-25 23:59:53,313 - INFO - Loading faiss with AVX2 support.
+2025-06-25 23:59:53,714 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-25 23:59:53,724 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-26 00:00:14,239 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:01:34,301 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:03:45,974 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:04:07,645 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:04:29,881 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:06:49,819 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-26 00:06:57,423 - INFO - Loading faiss with AVX2 support.
+2025-06-26 00:06:57,463 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-26 00:06:57,475 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-26 00:07:28,327 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:07:50,858 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:08:47,705 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-26 00:08:54,125 - INFO - Loading faiss with AVX2 support.
+2025-06-26 00:08:54,163 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-26 00:08:54,175 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-26 00:09:30,969 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:09:51,427 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-26 00:10:13,921 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:04:33,801 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-27 23:04:40,980 - INFO - Loading faiss with AVX2 support.
+2025-06-27 23:04:41,262 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-27 23:04:41,273 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-27 23:09:54,576 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:10:41,707 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:12:42,890 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:16:39,177 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:20:32,453 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:26:25,852 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:27:05,726 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:27:21,354 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:28:16,189 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:28:55,463 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:29:28,684 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:29:58,822 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:30:46,171 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:31:06,950 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:31:36,933 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:32:07,532 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:32:36,444 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:34:51,368 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:35:28,604 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-27 23:36:15,432 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-28 00:49:39,221 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-28 00:49:46,834 - INFO - Loading faiss with AVX2 support.
+2025-06-28 00:49:47,025 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-28 00:49:47,036 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-06-28 00:50:24,067 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
+2025-06-28 00:51:00,228 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/generate "HTTP/1.1 200 OK"
