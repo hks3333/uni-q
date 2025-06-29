@@ -62,13 +62,13 @@ def save_metadata_csv(file_name, departments, semesters, tags):
     metadata_path = os.path.join(DOCUMENTS_DIR, f"{file_name}.csv")
     with open(metadata_path, "w", encoding="utf-8", newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(["file_name", "departments", "semesters", "tags"])
-        writer.writerow([
-            file_name,
-            ",".join(departments),
-            ",".join(semesters),
-            ",".join(tags)
-        ])
+    writer.writerow(["file_name", "departments", "semesters", "tags"])
+    writer.writerow([
+        file_name,
+        ",".join(departments),
+        ",".join(semesters),
+        ",".join(tags)
+    ])
 
 def homepage():
     st.write("Welcome to the PDF Upload and Management System!")
@@ -116,11 +116,11 @@ def upload_page():
                 st.session_state.uploaded_files_session.append(new_file_name)
                 try:
                     save_metadata_csv(
-                        new_name,
-                        st.session_state[f"dept_{i}"],
-                        st.session_state[f"sem_{i}"],
+                            new_name,
+                            st.session_state[f"dept_{i}"],
+                            st.session_state[f"sem_{i}"],
                         st.session_state[f"tags_{i}"]
-                    )
+                        )
                     st.success(f"Metadata for {new_file_name} saved locally.")
                 except Exception as e:
                     st.error(f"Error saving metadata for {new_file_name}: {e}")
@@ -140,11 +140,11 @@ def edit_page():
         try:
             with open(metadata_path, "r", encoding="utf-8") as f:
                 reader = csv.reader(f)
-                headers = next(reader)
-                file_name, departments, semesters, tags = next(reader)
-                departments = departments.split(",")
-                semesters = semesters.split(",")
-                tags = tags.split(",")
+            headers = next(reader)
+            file_name, departments, semesters, tags = next(reader)
+            departments = departments.split(",")
+            semesters = semesters.split(",")
+            tags = tags.split(",")
         except Exception as e:
             st.error(f"Error fetching metadata for {selected_file}: {e}")
             return
@@ -203,32 +203,33 @@ def update_knowledge_base_page():
     st.write(f"**Deleted Files**: {deleted}")
     progress_bar = st.progress(0)
     if st.button("Run Update Now", key="run_update_btn"):
-        try:
-            import time
-            with st.spinner("Updating knowledge base..."):
-                progress_bar.progress(10)
-                response = requests.post(
-                    "http://localhost:8000/update_knowledge_base",
-                    json={
-                        "new_files": uploaded,
-                        "updated_files": edited,
-                        "deleted_files": deleted
-                    }
-                )
-                progress_bar.progress(90)
-                time.sleep(0.2)
-                if response.status_code == 200:
-                    st.success("✅ Knowledge base updated successfully!")
-                    st.session_state.uploaded_files_session = []
-                    st.session_state.edited_files_session = []
-                    st.session_state.deleted_files_session = []
-                    progress_bar.progress(100)
-                else:
-                    st.error(f"Error updating knowledge base: {response.text}")
-                    progress_bar.progress(0)
-        except Exception as e:
-            st.error(f"Error connecting to FastAPI server: {e}")
+    try:
+        import time
+        with st.spinner("Updating knowledge base..."):
+            progress_bar.progress(10)
+        response = requests.post(
+            "http://localhost:8000/update_knowledge_base",
+            json={
+                "new_files": uploaded,
+                "updated_files": edited,
+                "deleted_files": deleted
+            }
+        )
+        progress_bar.progress(90)
+        time.sleep(0.2)
+                
+        if response.status_code == 200:
+            st.success("✅ Knowledge base updated successfully!")
+            st.session_state.uploaded_files_session = []
+            st.session_state.edited_files_session = []
+            st.session_state.deleted_files_session = []
+            progress_bar.progress(100)
+        else:
+            st.error(f"Error updating knowledge base: {response.text}")
             progress_bar.progress(0)
+    except Exception as e:
+        st.error(f"Error connecting to FastAPI server: {e}")
+        progress_bar.progress(0)
 
 if st.session_state.page == "Home":
     homepage()

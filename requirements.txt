@@ -1,5 +1,5 @@
 # For CUDA 12.1+ (works with CUDA 12.3 drivers)
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 fastapi
 langchain
@@ -8,8 +8,15 @@ langchain-huggingface
 langchain-ollama
 pydantic
 requests
+aiohttp
 streamlit
 uvicorn
 pymupdf
 httpx
 numpy
+
+# Research Agent Dependencies
+tavily-python==0.3.1
+beautifulsoup4==4.12.2
+lxml==4.9.3
+python-dotenv==1.0.0
