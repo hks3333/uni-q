@@ -1,13 +1,30 @@
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 
-# File Management Models
+class StudentLogin(BaseModel):
+    roll_no: str
+    password: str
+
+class StudentRegister(BaseModel):
+    roll_no: str
+    name: str
+    department: str
+    branch: str
+    semester: str
+
+class StudentResponse(BaseModel):
+    id: int
+    roll_no: str
+    name: str
+    department: str
+    branch: str
+    semester: str
+
 class FileLists(BaseModel):
     new_files: List[str]
     updated_files: List[str]
     deleted_files: List[str]
 
-# Research Agent Models
 class ResearchPlanRequest(BaseModel):
     query: str
 
@@ -29,7 +46,6 @@ class ResearchExecuteResponse(BaseModel):
 
 class WebSearchResult(BaseModel):
     title: str
-    url: str
     content: str
-    relevance_score: float
+    url: str
     source_type: str 

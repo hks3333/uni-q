@@ -2,10 +2,14 @@
 'use client'
 import './chat.css'
 import { useEffect, useRef, useState } from 'react'
-import { loadMemoryVectorStore, queryLlama3, checkOllamaServer } from '@/lib/ollama'
+import { useRouter } from 'next/navigation'
 import ResearchPlan from '@/components/ResearchPlan'
+import ReactMarkdown from 'react-markdown'
+import { useAuth } from '../contexts/AuthContext'
 
 export default function ChatPage() {
+  const { user, loading: authLoading, logout, getToken, isAuthenticated } = useAuth()
+  const router = useRouter()
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -15,20 +19,42 @@ export default function ChatPage() {
   const abortRef = useRef(null)
   const messagesEndRef = useRef(null)
   const messageContainerRef = useRef(null)
- 
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !isAuthenticated) {
+      router.replace('/login')
+    }
+  }, [authLoading, isAuthenticated, router])
+
   // Auto-scroll to bottom when new messages are added
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })
+    if (messagesEndRef.current && isAuthenticated) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) 
     }
-  }, [messages])
+  }, [messages, isAuthenticated])
 
   // Scroll to bottom when loading state changes
   useEffect(() => {
-    if (loading && messageContainerRef.current) {
+    if (loading && messageContainerRef.current && isAuthenticated) {
       messageContainerRef.current.scrollTop = messageContainerRef.current.scrollHeight
     }
-  }, [loading])
+  }, [loading, isAuthenticated])
+
+  // Show loading while checking authentication
+  if (authLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    )
+  }
+
+  // Show login page if not authenticated
+  if (!isAuthenticated) {
+    return null
+  }
 
   const sendMessage = async () => {
     if (!input.trim()) return
@@ -53,9 +79,13 @@ export default function ChatPage() {
       const controller = new AbortController()
       abortRef.current = controller
       
+      const token = getToken()
       const res = await fetch('/api/chat', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
         body: JSON.stringify({ question: userMessage }),
         signal: controller.signal,
       })
@@ -277,8 +307,15 @@ export default function ChatPage() {
 
   return (
     <div className={`chat-container ${researchMode ? 'research-mode' : ''}`}>
-      <div className="chat-header">
-        <h1>Uni-Q Chat</h1>
+      <div className="topbar-wrapper">
+        <div className="chat-header">
+          <h1>Uni-Q Chat</h1>
+          <div className="user-info">
+            <span className="user-name">{user.name}</span>
+            <span className="user-details">{user.department} • {user.semester}</span>
+            <button onClick={logout} className="logout-btn">Logout</button>
+          </div>
+        </div>
       </div>
 
       <div className="message-container" ref={messageContainerRef}>
@@ -297,14 +334,17 @@ export default function ChatPage() {
         {messages.map((msg, i) => (
           <div key={i} className={`message ${msg.role}`}>
             <div className="message-content">
-              {msg.content || (
-                <div className="typing-indicator">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+              {msg.role === 'bot' ? (
+                <ReactMarkdown>{msg.content || ''}</ReactMarkdown>
+              ) : (
+                msg.content || (
+                  <div className="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                )
               )}
-              
               {/* Render research plan */}
               {msg.type === 'research_plan' && msg.plan && (
                 <ResearchPlan 
@@ -340,7 +380,7 @@ export default function ChatPage() {
       </div>
 
       <form onSubmit={handleSubmit} className="input-area">
-        <div className="input-wrapper">
+        <div className="input-row">
           <input
             type="text"
             value={input}
@@ -351,39 +391,41 @@ export default function ChatPage() {
             autoComplete="off"
             className="input"
           />
-          <button 
-            type="button"
-            onClick={toggleResearchMode}
-            className={`research-toggle ${researchMode ? 'active' : ''}`}
-            title={researchMode ? "Switch to Document Mode" : "Switch to Research Mode"}
-          >
-            {researchMode ? '📚' : '🔍'} Research
-          </button>
-        </div>
-        <div className="button-group">
-          <button 
-            type="submit" 
-            disabled={loading || !input.trim()}
-            title="Send message"
-            className="btn"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M22 2L11 13"/>
-              <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
-            </svg>
-          </button>
-          {loading && (
+          {loading ? (
             <button 
               type="button" 
               onClick={handleStop}
               title="Stop generation"
-              className="btn"
-              style={{ background: '#dc2626' }}
+              className="btn stop-btn"
             >
-              Stop
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="9" y1="9" x2="15" y2="15"/>
+                <line x1="15" y1="9" x2="9" y2="15"/>
+              </svg>
+            </button>
+          ) : (
+            <button 
+              type="submit" 
+              disabled={!input.trim()}
+              title="Send message"
+              className="btn send-btn"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 2L11 13"/>
+                <path d="M22 2L15 22L11 13L2 9L22 2Z"/>
+              </svg>
             </button>
           )}
         </div>
+        <button 
+          type="button"
+          onClick={toggleResearchMode}
+          className={`research-toggle-minimal${researchMode ? ' active' : ''}`}
+          title={researchMode ? "Switch to Document Mode" : "Switch to Research Mode"}
+        >
+          Research
+        </button>
       </form>
     </div>
   )

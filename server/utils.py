@@ -107,3 +107,66 @@ def extract_domain(url: str) -> str:
         return parsed.netloc
     except:
         return url 
+
+# Classification keywords for quick matching
+GENERAL_KEYWORDS = ['hi', 'hello', 'hey', 'how are you', 'good morning', 'good afternoon', 'good evening', 'thanks', 'thank you', 'bye', 'goodbye']
+RAG_KEYWORDS = ['chapter', 'assignment', 'syllabus', 'exam', 'project', 'document', 'pdf', 'read', 'explain', 'summarize', 'what does', 'how to', 'requirements']
+
+async def classify_query_shared(question: str, student_context: dict, ollama_session) -> str:
+    """
+    Shared classification function used by both main.py and classification.py
+    Returns "GENERAL" or "RAG"
+    """
+    try:
+        # Quick keyword-based classification for common cases
+        query_lower = question.lower().strip()
+        
+        # Check for obvious general queries
+        if any(keyword in query_lower for keyword in GENERAL_KEYWORDS):
+            return "GENERAL"
+        
+        # Check for obvious RAG queries
+        if any(keyword in query_lower for keyword in RAG_KEYWORDS):
+            return "RAG"
+        
+        # Use LLM for ambiguous cases
+        from .config import QUERY_CLASSIFICATION_PROMPT, MODEL_NAME
+        
+        prompt = QUERY_CLASSIFICATION_PROMPT.format(
+            department=student_context.get('department', ''),
+            semester=student_context.get('semester', ''),
+            query=question
+        )
+        
+        # Use the existing connection pool
+        ollama_url = "http://localhost:11434/api/generate"
+        payload = {
+            "model": MODEL_NAME,
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": 0.1,
+                "num_predict": 5,
+                "top_k": 1,
+                "top_p": 0.1,
+                "num_ctx": 512
+            }
+        }
+        
+        async with ollama_session.post(ollama_url, json=payload) as response:
+            result = await response.json()
+            classification = result.get('response', '').strip().upper()
+            
+            if classification not in ["GENERAL", "RAG"]:
+                if "GENERAL" in classification:
+                    return "GENERAL"
+                elif "RAG" in classification:
+                    return "RAG"
+                else:
+                    return "RAG"  # Default to RAG for unclear cases
+            
+            return classification
+            
+    except Exception as e:
+        # Default to RAG on error
+        return "RAG" 

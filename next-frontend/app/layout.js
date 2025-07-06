@@ -1,6 +1,7 @@
 import { Nunito } from 'next/font/google'
 import './chat.css'
 import ClientLayout from './client-layout'
+import { AuthProvider } from '../contexts/AuthContext'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={nunito.variable}>
       <body>
-        <ClientLayout>{children}</ClientLayout>
+        <AuthProvider>
+          <ClientLayout>{children}</ClientLayout>
+        </AuthProvider>
       </body>
     </html>
   )

@@ -48,3 +48,392 @@ connector: <aiohttp.connector.TCPConnector object at 0x000001B94CD500B0>
 client_session: <aiohttp.client.ClientSession object at 0x000001B94CD51850>
 2025-06-29 17:42:29,424 - ERROR - Unclosed client session
 client_session: <aiohttp.client.ClientSession object at 0x000001B94CD51700>
+2025-06-29 17:51:42,737 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-06-29 17:51:49,304 - INFO - Loading faiss with AVX2 support.
+2025-06-29 17:51:49,417 - INFO - Successfully loaded faiss with AVX2 support.
+2025-06-29 17:51:49,432 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-03 00:37:02,784 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-03 00:37:09,163 - INFO - Loading faiss with AVX2 support.
+2025-07-03 00:37:09,562 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-03 00:37:09,574 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-03 00:40:23,699 - INFO - Generated plan type: <class 'dict'>
+2025-07-03 00:40:23,700 - INFO - Generated plan: {'objectives': ["Research i wanna prepare for tech interviews, so i wanna cover the basics in core computer science subjects. what's the best way to prepare. give me a 1 month timeline comprehensively", "Find latest developments and research in i wanna prepare for tech interviews, so i wanna cover the basics in core computer science subjects. what's the best way to prepare. give me a 1 month timeline", "Identify key experts and authoritative sources on i wanna prepare for tech interviews, so i wanna cover the basics in core computer science subjects. what's the best way to prepare. give me a 1 month timeline", "Analyze current trends and future outlook for i wanna prepare for tech interviews, so i wanna cover the basics in core computer science subjects. what's the best way to prepare. give me a 1 month timeline"], 'search_queries': ['best programming languages for tech interviews 2024', 'core computer science concepts for beginners', 'tech interview preparation strategies and tips', 'latest developments in data structures and algorithms', 'expert advice on problem-solving in tech interviews', "top tech companies' interview processes and requirements"], 'sources': ['academic papers and research journals', 'latest news and industry reports', 'expert opinions and analysis', 'technical documentation and guides', 'industry reports and market analysis', 'government and institutional reports'], 'analysis_framework': ['background and fundamentals', 'current state and latest developments', 'key findings and breakthroughs', 'implications and future outlook', 'expert consensus and predictions']}
+2025-07-03 00:40:23,701 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F2359F9610>
+2025-07-03 00:40:23,701 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F235C1EC30>, 492172.359)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F23598E6C0>
+2025-07-03 00:41:27,793 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F23E8D38C0>
+2025-07-03 00:42:30,243 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F23E8D02F0>
+2025-07-03 00:42:30,245 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F235C1F950>, 492298.906)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F23E8D3D70>
+2025-07-03 01:12:34,695 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-03 01:12:41,837 - INFO - Loading faiss with AVX2 support.
+2025-07-03 01:12:41,939 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-03 01:12:41,952 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-03 08:34:19,316 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-03 08:34:28,368 - INFO - Loading faiss with AVX2 support.
+2025-07-03 08:34:28,468 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-03 08:34:28,479 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 09:40:51,804 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 09:41:02,352 - INFO - Loading faiss with AVX2 support.
+2025-07-05 09:41:02,723 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 09:41:02,734 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 09:51:16,074 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 09:51:23,718 - INFO - Loading faiss with AVX2 support.
+2025-07-05 09:51:23,781 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 09:51:23,790 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 10:43:56,792 - INFO - Generated plan type: <class 'dict'>
+2025-07-05 10:43:56,806 - INFO - Generated plan: {'objectives': ['Research trends in the automation industry comprehensively', 'Find latest developments and research in trends in the automation industry', 'Identify key experts and authoritative sources on trends in the automation industry', 'Analyze current trends and future outlook for trends in the automation industry'], 'search_queries': ['trends in the automation industry latest research papers 2024', 'impact of automation on industries report 2024', 'artificial intelligence and machine learning trends in automation 2024', 'automation industry growth prospects report 2024', 'current state of automation technology in manufacturing 2024', 'future of work with automation trends analysis 2024'], 'sources': ['academic papers and research journals', 'latest news and industry reports', 'expert opinions and analysis', 'technical documentation and guides', 'industry reports and market analysis', 'government and institutional reports'], 'analysis_framework': ['background and fundamentals', 'current state and latest developments', 'key findings and breakthroughs', 'implications and future outlook', 'expert consensus and predictions']}
+2025-07-05 10:43:56,815 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001BB41ADCD70>
+2025-07-05 10:43:56,816 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001BB6126EE10>, 701187.796)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001BB6104BC50>
+2025-07-05 10:53:28,031 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 10:53:36,104 - INFO - Loading faiss with AVX2 support.
+2025-07-05 10:53:36,588 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 10:53:36,604 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 10:53:57,078 - ERROR - Error generating research plan: '\n  "thinking_process"'
+2025-07-05 10:53:57,078 - ERROR - Error creating research plan: Failed to generate research plan: '\n  "thinking_process"'
+2025-07-05 10:53:57,079 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001CBAEF61190>
+2025-07-05 10:54:38,187 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 10:54:47,098 - INFO - Loading faiss with AVX2 support.
+2025-07-05 10:54:47,133 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 10:54:47,141 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 10:55:41,716 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 10:55:49,320 - INFO - Loading faiss with AVX2 support.
+2025-07-05 10:55:49,345 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 10:55:49,352 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 10:56:01,646 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 10:56:10,792 - INFO - Loading faiss with AVX2 support.
+2025-07-05 10:56:10,828 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 10:56:10,838 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 11:17:03,160 - ERROR - Error generating research plan: 'CURRENT_YEAR'
+2025-07-05 11:17:03,162 - ERROR - Error creating research plan: Failed to generate research plan: 'CURRENT_YEAR'
+2025-07-05 11:17:03,163 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001E6D0F6DF40>
+2025-07-05 11:18:17,509 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 11:18:28,302 - INFO - Loading faiss with AVX2 support.
+2025-07-05 11:18:28,381 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 11:18:28,396 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:32:06,770 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:32:13,785 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:32:13,875 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:32:13,887 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:35:17,040 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:35:24,288 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:35:24,321 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:35:24,333 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:35:37,660 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:35:43,923 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:35:43,952 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:35:43,961 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:55:36,249 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:55:42,795 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:55:42,904 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:55:42,920 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:55:57,162 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:56:02,900 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:56:02,946 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:56:02,958 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 13:59:44,054 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 13:59:50,415 - INFO - Loading faiss with AVX2 support.
+2025-07-05 13:59:50,442 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 13:59:50,449 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 14:00:04,025 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 14:00:10,073 - INFO - Loading faiss with AVX2 support.
+2025-07-05 14:00:10,123 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 14:00:10,134 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 14:00:26,624 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 14:00:32,583 - INFO - Loading faiss with AVX2 support.
+2025-07-05 14:00:32,623 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 14:00:32,633 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 14:00:51,928 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 14:00:57,709 - INFO - Loading faiss with AVX2 support.
+2025-07-05 14:00:57,740 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 14:00:57,748 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 14:02:47,265 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 14:02:53,060 - INFO - Loading faiss with AVX2 support.
+2025-07-05 14:02:53,099 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 14:02:53,108 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 14:26:31,772 - INFO - Generated plan type: <class 'dict'>
+2025-07-05 14:26:31,778 - INFO - Generated plan: {'objectives': ['Research what are the trends in computer science industry. comprehensively', 'Find latest developments and research in what are the trends in computer science industry.', 'Identify key experts and authoritative sources on what are the trends in computer science industry.', 'Analyze current trends and future outlook for what are the trends in computer science industry.'], 'search_queries': ['what are the trends in computer science industry. latest research papers 2024', 'trends in artificial intelligence and machine learning 2024', 'computer science industry outlook 2024: expert analysis', 'latest developments in quantum computing 2024', 'what are the future trends in cybersecurity 2024', 'artificial intelligence and computer vision trends 2024'], 'sources': ['academic papers and research journals (e.g. arXiv, ResearchGate)', 'latest news and industry reports from reputable sources (e.g. IEEE Spectrum, TechCrunch)', 'expert opinions and analysis from leading researchers and professionals (e.g. Google AI Blog, MIT Technology Review)', 'technical documentation and guides from established companies (e.g. Microsoft Azure, AWS Documentation)', 'industry reports and market analysis from firms like Gartner, Forrester', 'government and institutional reports on computer science trends and initiatives'], 'analysis_framework': ['background and fundamentals: understanding the history and evolution of computer science', 'current state and latest developments: analyzing recent research papers, news, and expert opinions', 'key findings and breakthroughs: identifying significant trends and innovations in computer science', 'implications and future outlook: exploring the potential impact of emerging trends on the industry and society', 'expert consensus and predictions: gathering insights from leading experts and researchers to forecast future developments']}
+2025-07-05 14:26:31,783 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B080060440>
+2025-07-05 14:26:31,784 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001B08027AE70>, 714542.796)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001B089025F40>
+2025-07-05 14:27:59,883 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B089041190>
+2025-07-05 14:30:10,412 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B080060440>
+2025-07-05 14:35:46,706 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001B0F88CC380>
+2025-07-05 21:11:49,262 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 21:11:59,508 - INFO - Loading faiss with AVX2 support.
+2025-07-05 21:11:59,607 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 21:11:59,619 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 22:05:37,444 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 22:10:45,143 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 22:10:52,999 - INFO - Loading faiss with AVX2 support.
+2025-07-05 22:10:53,095 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 22:10:53,106 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 22:17:19,327 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 22:17:27,261 - INFO - Loading faiss with AVX2 support.
+2025-07-05 22:17:27,305 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 22:17:27,318 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 22:18:26,219 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 22:18:32,558 - INFO - Loading faiss with AVX2 support.
+2025-07-05 22:18:32,591 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 22:18:32,598 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 22:18:49,081 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 22:18:56,381 - INFO - Loading faiss with AVX2 support.
+2025-07-05 22:18:56,484 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 22:18:56,508 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:19:18,654 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:19:24,670 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:19:24,713 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:19:24,725 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:31:05,326 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:31:11,402 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:31:11,448 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:31:11,458 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:40:08,818 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:40:17,224 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:40:17,312 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:40:17,326 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:44:35,809 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:44:41,875 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:44:41,909 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:44:41,921 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:44:56,202 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:45:02,421 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:45:02,445 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:45:02,452 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:45:17,223 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:45:23,277 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:45:23,314 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:45:23,323 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:45:37,915 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:45:43,279 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:45:43,307 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:45:43,318 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:45:56,014 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:46:02,738 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:46:02,786 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:46:02,806 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:47:37,176 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:47:43,296 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:47:43,334 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:47:43,346 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:52:14,225 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:52:21,818 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:52:21,857 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:52:21,871 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:52:35,145 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:52:40,617 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:52:40,644 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:52:40,654 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:54:55,893 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:55:01,973 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:55:01,998 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:55:02,008 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-05 23:58:40,993 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-05 23:58:50,047 - INFO - Loading faiss with AVX2 support.
+2025-07-05 23:58:50,079 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-05 23:58:50,091 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 00:05:51,118 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 00:05:58,241 - INFO - Loading faiss with AVX2 support.
+2025-07-06 00:05:58,301 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 00:05:58,312 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 00:06:17,466 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 00:06:24,692 - INFO - Loading faiss with AVX2 support.
+2025-07-06 00:06:24,726 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 00:06:24,738 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 00:14:53,616 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 00:15:02,299 - INFO - Loading faiss with AVX2 support.
+2025-07-06 00:15:02,416 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 00:15:02,437 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 00:26:35,900 - INFO - Generated plan type: <class 'dict'>
+2025-07-06 00:26:35,906 - INFO - Generated plan: {'objectives': ['Research trends in automation industry comprehensively', 'Find latest developments and research in trends in automation industry', 'Identify key experts and authoritative sources on trends in automation industry', 'Analyze current trends and future outlook for trends in automation industry'], 'search_queries': ['trends in automation industry latest research papers 2024', 'artificial intelligence machine learning robotics trends 2024', 'industrial automation industry report 2024', 'automated manufacturing systems trends analysis 2024', 'robotics and automation future predictions 2024', 'industry 4.0 automation trends news 2024'], 'sources': ['academic papers and research journals (e.g. IEEE Xplore, ScienceDirect)', 'latest news and industry reports (e.g. McKinsey Quarterly, IndustryWeek)', 'expert opinions and analysis (e.g. Harvard Business Review, MIT Technology Review)', 'technical documentation and guides (e.g. AWS Automation Guide, Google Cloud Automation Guide)', 'industry reports and market analysis (e.g. Gartner Research, IDC Market Analysis)', "government and institutional reports (e.g. National Institute of Standards and Technology, European Union's Horizon 2020)"], 'analysis_framework': ['Background and Fundamentals: Define key terms and concepts in automation industry', 'Current State and Latest Developments: Analyze recent research papers, news articles, and expert opinions on trends in automation industry', 'Key Findings and Breakthroughs: Identify emerging technologies and innovations in automation industry', 'Implications and Future Outlook: Discuss potential impact of trends in automation industry on industries such as manufacturing, logistics, and healthcare', 'Expert Consensus and Predictions: Summarize findings from expert opinions and analysis to provide a comprehensive understanding of trends in automation industry']}
+2025-07-06 00:26:35,946 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000016BE72E3650>
+2025-07-06 00:26:35,965 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000016BE73C7A10>, 750546.906)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000016BE72E16A0>
+2025-07-06 00:27:14,905 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:14,905 - WARNING - Search failed for query 'trends in automation industry latest research papers 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:20,464 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:20,465 - WARNING - Search failed for query 'artificial intelligence machine learning robotics trends 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:29,356 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:29,356 - WARNING - Search failed for query 'industrial automation industry report 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:36,170 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:36,170 - WARNING - Search failed for query 'automated manufacturing systems trends analysis 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:27:36,171 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000016BF0F46420>
+2025-07-06 00:27:53,436 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000016BF0F44EF0>
+2025-07-06 00:36:56,939 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 00:37:03,432 - INFO - Loading faiss with AVX2 support.
+2025-07-06 00:37:03,522 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 00:37:03,536 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 00:37:32,763 - INFO - Generated plan type: <class 'dict'>
+2025-07-06 00:37:32,763 - INFO - Generated plan: {'objectives': ['Identify the top 3-5 emerging technological trends in automation (e.g., AI in robotics, industrial IoT, collaborative robots).', 'Assess the current market size and projected growth of the automation industry globally.', 'Analyze the impact of automation trends on labor markets and skill requirements.'], 'search_queries': ['automation industry trends 2024-2025 report', 'impact of AI on industrial automation', 'robotics market growth projections', 'future of automation jobs and skills', 'emerging automation technologies analysis', 'automation industry challenges and opportunities'], 'sources': ['market research reports (Gartner, IDC)', 'academic journals (IEEE, ACM)', 'technology news outlets (TechCrunch, Wired)', 'industry association publications', 'government economic reports', 'corporate white papers and blogs of leading companies'], 'analysis_framework': ['Definition and scope of the automation industry', 'Key technological trends and their current state', 'Market analysis and economic impact (growth, investment)', 'Societal implications (employment, ethics)', 'Future outlook and strategic recommendations']}
+2025-07-06 00:37:32,763 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0DCE44A40>
+2025-07-06 00:37:32,763 - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001A0DD0EA450>, 751203.796)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001A0DCF19310>
+2025-07-06 00:38:22,463 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:22,464 - WARNING - Search failed for query 'automation industry trends 2024-2025 report': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:31,021 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:31,021 - WARNING - Search failed for query 'impact of AI on industrial automation': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:42,664 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:42,664 - WARNING - Search failed for query 'robotics market growth projections': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:49,961 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:49,962 - WARNING - Search failed for query 'future of automation jobs and skills': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:38:49,962 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0DCFB2A50>
+2025-07-06 00:40:00,301 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0E5EEEF30>
+2025-07-06 00:45:30,093 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:30,093 - WARNING - Search failed for query 'trends in automation industry latest research papers 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:32,879 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:32,879 - WARNING - Search failed for query 'artificial intelligence machine learning robotics trends 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:36,024 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:36,024 - WARNING - Search failed for query 'industrial automation industry report 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:39,140 - ERROR - Error in web search: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:39,140 - WARNING - Search failed for query 'automated manufacturing systems trends analysis 2024': Web search failed: 'WebSearchResult' object has no attribute 'relevance_score'
+2025-07-06 00:45:39,141 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0E6013E90>
+2025-07-06 00:46:47,887 - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001A0E5EEFCB0>
+2025-07-06 01:13:45,465 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:13:52,882 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:13:52,956 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:13:52,967 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:30:23,690 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:30:31,864 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:30:31,940 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:30:31,950 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:36:31,987 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:36:39,200 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:36:39,288 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:36:39,301 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:36:54,378 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 500 Internal Server Error"
+2025-07-06 01:37:55,431 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:38:02,420 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:38:02,456 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:38:02,468 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:38:18,409 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:38:25,024 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:38:25,053 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:38:25,062 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:38:26,034 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 500 Internal Server Error"
+2025-07-06 01:42:27,800 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:42:33,651 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:42:33,678 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:42:33,685 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:43:01,184 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:43:01,188 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:43:25,023 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:43:25,025 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:44:26,683 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:44:26,684 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:50:57,061 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:51:03,936 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:51:03,967 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:51:03,976 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:52:21,740 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:52:28,133 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:52:28,165 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:52:28,172 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:52:45,233 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:52:53,155 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:52:53,197 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:52:53,208 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:53:10,213 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:53:16,264 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:53:16,290 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:53:16,300 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:53:28,836 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:53:34,194 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:53:34,219 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:53:34,226 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:53:55,868 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:53:55,870 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:54:20,362 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:54:20,366 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:54:50,778 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:54:50,780 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:55:28,651 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:57:04,836 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:57:11,806 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:57:11,875 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:57:11,885 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:57:25,164 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 01:57:32,101 - INFO - Loading faiss with AVX2 support.
+2025-07-06 01:57:32,144 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 01:57:32,155 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 01:57:40,437 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:57:47,159 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:58:07,286 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:58:07,290 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:59:03,147 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 01:59:03,149 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 01:59:53,870 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 02:00:30,622 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 02:00:30,623 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 02:05:09,733 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 02:05:17,613 - INFO - Loading faiss with AVX2 support.
+2025-07-06 02:05:17,676 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 02:05:17,686 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 08:56:31,118 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 08:56:37,933 - INFO - Loading faiss with AVX2 support.
+2025-07-06 08:56:38,021 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 08:56:38,032 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 08:56:50,736 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 08:57:13,756 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 08:57:35,835 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 08:58:16,711 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 08:58:16,718 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 08:58:28,368 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 08:59:22,704 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 08:59:22,706 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 09:00:40,000 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 09:00:40,001 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 09:01:24,326 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-07-06 09:01:24,328 - INFO - HTTP Request: POST http://localhost:8000/classification/classify "HTTP/1.1 200 OK"
+2025-07-06 09:12:22,876 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:12:29,784 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:12:29,888 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:12:29,902 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:29:43,142 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:29:49,249 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:29:49,320 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:29:49,330 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:32:00,699 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:32:07,725 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:32:07,749 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:32:07,756 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:32:19,559 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:32:26,049 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:32:26,076 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:32:26,086 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:32:57,104 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:33:04,167 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:33:04,232 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:33:04,245 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:33:33,066 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:33:40,661 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:33:40,688 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:33:40,694 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-06 09:33:53,529 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-07-06 09:33:58,930 - INFO - Loading faiss with AVX2 support.
+2025-07-06 09:33:58,953 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-06 09:33:58,959 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.

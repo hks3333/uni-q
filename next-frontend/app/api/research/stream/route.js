@@ -5,11 +5,17 @@ export const runtime = 'nodejs';
 export async function POST(req) {
   const body = await req.json();
   const fastapiUrl = 'http://localhost:8000/research/stream';
+  
+  // Get the Authorization header from the request (for consistency)
+  const authHeader = req.headers.get('authorization');
 
   try {
     const fastapiRes = await fetch(fastapiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        ...(authHeader && { 'Authorization': authHeader })
+      },
       body: JSON.stringify(body),
     });
 

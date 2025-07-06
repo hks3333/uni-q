@@ -1,224 +1,91 @@
-# RAG & Roll - Local RAG System with Research Agent
+# RAG n Roll: University RAG Chatbot System
 
-A complete local Retrieval-Augmented Generation (RAG) system with integrated research capabilities, featuring a FastAPI backend, Next.js frontend, and Streamlit admin portal.
+## 🚀 Installation & Setup (Windows)
 
-## 🚀 Quick Start
-
-### Prerequisites
-- **Python 3.8+**
-- **Node.js 16+**
-- **Ollama** (for local LLM)
-- **Tavily API Key** (for web research)
-
-### 1. Install Ollama
-```bash
-# Download from https://ollama.ai/
-# Or use winget on Windows:
-winget install Ollama.Ollama
+### 1. Clone the Repository
+```
+git clone <repo-url>
+cd rag_n_roll
 ```
 
-### 2. Pull Llama3.2 Model
-```bash
-ollama pull llama3.2:latest
+### 2. Create and Activate Python Virtual Environment (in root)
+```
+python -m venv venv
+venv\Scripts\activate
 ```
 
-### 3. Get Tavily API Key
-- Visit [Tavily](https://tavily.com/)
-- Sign up for free API key
-- Create `.env` file in project root:
+### 3. Install Python Backend Requirements
 ```
-TAVILY_API_KEY=your_api_key_here
-```
-
-### 4. Start Everything
-```bash
-# Windows
-run_new.bat
-
-# Or manually:
-# 1. Activate venv: venv\Scripts\activate
-# 2. Start Ollama: ollama serve
-# 3. Start FastAPI: python -m uvicorn server.main:app --host 0.0.0.0 --port 8000 --reload
-# 4. Start Next.js: cd next-frontend && npm run dev
-```
-
-## 📁 Project Structure
-
-```
-rag_n_roll/
-├── server/                 # FastAPI backend
-│   ├── main.py            # Main server entry point
-│   ├── models.py          # Pydantic models
-│   ├── config.py          # Configuration settings
-│   ├── utils.py           # Utility functions
-│   ├── research_agent.py  # Research agent implementation
-│   └── routes/            # API routes
-├── next-frontend/         # Next.js chat interface
-│   ├── app/              # Next.js app directory
-│   ├── components/       # React components
-│   └── lib/             # Utility libraries
-├── frontend/             # Streamlit admin portal
-│   └── bot.py           # Admin interface
-├── portal/              # Additional portal
-│   └── app.py           # Portal application
-├── documents/           # Document storage
-├── faiss_index/         # Vector index storage
-├── embed_cache/         # Embedding cache
-├── run_all.bat         # Full system startup
-├── run_new.bat         # Quick startup
-└── requirements.txt    # Python dependencies
-```
-
-## 🔧 Features
-
-### Core RAG System
-- **Document Upload & Processing**: Upload PDFs, docs, text files
-- **Vector Embeddings**: Using HuggingFace embeddings
-- **FAISS Index**: Local vector storage and similarity search
-- **Chat Interface**: Modern Next.js chat UI with streaming responses
-
-### Research Agent
-- **Research Mode Toggle**: Switch between chat and research modes
-- **AI Research Planning**: Generate detailed research plans with Llama3.2
-- **Web Search**: Integrated Tavily API for real-time web research
-- **Content Synthesis**: AI-powered research synthesis and reporting
-- **Streaming Responses**: Real-time research progress and results
-
-### Admin Tools
-- **Streamlit Portal**: Document management and system monitoring
-- **Batch Processing**: Upload multiple documents at once
-- **Index Management**: View and manage vector indices
-
-## 🎯 Usage
-
-### Chat Mode
-1. Open http://localhost:3000
-2. Type your question
-3. Get AI responses based on your uploaded documents
-
-### Research Mode
-1. Toggle "Research Mode" in chat interface
-2. Enter your research query
-3. Review and refine the AI-generated research plan
-4. Execute the plan to search the web
-5. Get a comprehensive research synthesis
-
-### Admin Portal
-1. Open http://localhost:8501
-2. Upload documents for RAG system
-3. Monitor system status and indices
-
-## ⚙️ Configuration
-
-### Environment Variables (.env)
-```
-TAVILY_API_KEY=your_tavily_api_key
-RESEARCH_MODE_ENABLED=true
-MAX_SEARCH_RESULTS=5
-RESEARCH_TIMEOUT=300
-```
-
-### Model Configuration (server/config.py)
-- **Chat Context**: 8K tokens
-- **Research Plan**: 8K tokens  
-- **Research Synthesis**: 24K tokens
-- **GPU Layers**: Configurable for performance
-
-## 🔍 API Endpoints
-
-### Chat
-- `POST /chat` - Send chat message
-- `POST /chat/stream` - Stream chat response
-
-### Research
-- `POST /research/plan` - Generate research plan
-- `POST /research/execute` - Execute research plan
-- `POST /research/stream` - Stream research synthesis
-
-### Documents
-- `POST /upload` - Upload document
-- `GET /documents` - List documents
-- `DELETE /documents/{id}` - Delete document
-
-## 🛠️ Development
-
-### Backend Development
-```bash
-cd server
-python -m uvicorn main:app --reload --port 8000
-```
-
-### Frontend Development
-```bash
-cd next-frontend
-npm install
-npm run dev
-```
-
-### Testing
-```bash
-# Test chat functionality
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"message": "Hello", "history": []}'
-
-# Test research plan generation
-curl -X POST http://localhost:8000/research/plan \
-  -H "Content-Type: application/json" \
-  -d '{"query": "artificial intelligence trends 2024"}'
-```
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-**Ollama not responding:**
-```bash
-# Check if Ollama is running
-curl http://localhost:11434/api/tags
-
-# Restart Ollama
-ollama serve
-```
-
-**Missing dependencies:**
-```bash
-# Reinstall Python dependencies
 pip install -r requirements.txt
-
-# Reinstall Node dependencies
-cd next-frontend
-npm install
 ```
 
-**Port conflicts:**
-- FastAPI: Change port in `run_new.bat` (default: 8000)
-- Next.js: Change port in `next-frontend/package.json` (default: 3000)
-- Streamlit: Change port in `frontend/bot.py` (default: 8501)
+### 4. Install Node.js Frontend Dependencies
+```
+cd next-frontend
+npm install
+cd ..
+```
 
-**Research mode not working:**
-- Check Tavily API key in `.env`
-- Verify internet connection for web searches
-- Check Ollama model availability
-
-### Performance Optimization
-- **GPU Acceleration**: Set `GPU_LAYERS` in config.py
-- **Context Windows**: Adjust token limits based on your hardware
-- **Search Results**: Reduce `MAX_SEARCH_RESULTS` for faster research
-- **Cache Management**: Clear `embed_cache/` for fresh embeddings
-
-## 📝 License
-
-This project is for educational and research purposes.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Make changes
-4. Test thoroughly
-5. Submit pull request
+### 5. Start the Full System
+```
+run_new.bat
+```
+This will:
+- Start Ollama (LLM server)
+- Start FastAPI backend
+- Start Next.js frontend
+- Open the browser to the chat UI
 
 ---
 
-**Happy RAGging! 🎸**
+# 🧠 System Overview
+
+This project is a full-stack, context-aware RAG (Retrieval-Augmented Generation) chatbot for university students and admins. It features:
+- **Contextual RAG**: Answers are based on university documents, filtered by student department and semester.
+- **Admin Portal**: Register students, manage documents.
+- **Student Login**: JWT-based authentication, simple roll number/password.
+- **Personalized Chat**: Student context is used in every prompt and document retrieval.
+- **Query Classification**: Distinguishes between general and RAG queries for optimal LLM usage.
+- **Research Mode**: Advanced research planning and synthesis for complex queries.
+
+## 🔑 Authentication
+- Students log in with roll number and password (default: roll number).
+- JWT tokens are issued and stored in the browser.
+- Tokens include student context (department, semester, etc.) and are used for all API requests.
+
+## 📚 RAG Flow
+- Student asks a question in chat.
+- Query is classified as GENERAL or RAG (using fast keyword/LLM logic).
+- For RAG queries:
+  - Documents are filtered by department/semester.
+  - Top relevant chunks are retrieved from FAISS index.
+  - Prompt is constructed with context and student info.
+  - LLM (Ollama) generates a markdown-formatted answer.
+  - Source PDFs are linked at the end.
+- For GENERAL queries:
+  - LLM answers using only general knowledge and student context.
+
+## 🛠️ Tech Stack
+- **Backend**: FastAPI, LangChain, FAISS, PyMuPDF, Ollama, PyJWT, Tavily (research)
+- **Frontend**: Next.js, React, Tailwind CSS, React-Markdown
+- **Database**: SQLite (students, sessions)
+- **LLM**: Ollama (Llama3.2 or compatible)
+
+## 📝 Document Management
+- PDFs and metadata are stored in `/documents`.
+- Admins can update the knowledge base via the portal.
+- FAISS index is rebuilt as needed.
+
+## 🧑‍💻 Development Notes
+- All prompt templates are centralized in `server/config.py`.
+- All classification logic is centralized in `server/utils.py`.
+- No dead code or redundant endpoints.
+
+## 🆘 Troubleshooting
+- If ports are in use, use the stop option in `run_new.bat` to kill all services.
+- For LLM issues, ensure Ollama is running and the model is downloaded.
+- For frontend issues, ensure Node.js 18+ is installed.
+
+---
+
+**Enjoy your personalized, context-aware university chatbot!**

@@ -5,11 +5,21 @@ export const runtime = 'nodejs';
 export async function POST(req) {
   const body = await req.json();
   const fastapiUrl = 'http://localhost:8000/chat/stream';
+  
+  // Get the Authorization header from the request
+  const authHeader = req.headers.get('authorization');
+  
+  // Debug logging
+  console.log('Auth header received:', authHeader ? 'Present' : 'Missing');
+  console.log('Request body:', body);
 
   try {
     const fastapiRes = await fetch(fastapiUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json',
+        ...(authHeader && { 'Authorization': authHeader })
+      },
       body: JSON.stringify(body),
     });
 
@@ -37,7 +47,7 @@ export async function POST(req) {
       }
     });
 
-    return new NextResponse(stream, {
+    return new NextResponse(stream, { 
       status: 200,
       headers: {
         'Content-Type': 'text/plain',

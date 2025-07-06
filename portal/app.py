@@ -2,7 +2,9 @@ import os
 import csv
 import streamlit as st
 import requests
+import sqlite3
 from io import StringIO
+from datetime import datetime
 
 # Predefined tags
 PREDEFINED_TAGS = ["Textbook", "Lecture Notes", "Research Paper", "Policy", "Announcement", "Notice", "Rulebook", "Other"]
@@ -45,6 +47,8 @@ if st.sidebar.button("Upload Files"):
     st.session_state.page = "Upload Files"
 if st.sidebar.button("Edit Existing Files"):
     st.session_state.page = "Edit Existing Files"
+if st.sidebar.button("Register Students"):
+    st.session_state.page = "Register Students"
 if st.sidebar.button("View Session Actions"):
     st.write("**Uploaded Files:**", st.session_state.uploaded_files_session)
     st.write("**Edited Files:**", st.session_state.edited_files_session)
@@ -62,13 +66,13 @@ def save_metadata_csv(file_name, departments, semesters, tags):
     metadata_path = os.path.join(DOCUMENTS_DIR, f"{file_name}.csv")
     with open(metadata_path, "w", encoding="utf-8", newline='') as f:
         writer = csv.writer(f)
-    writer.writerow(["file_name", "departments", "semesters", "tags"])
-    writer.writerow([
-        file_name,
-        ",".join(departments),
-        ",".join(semesters),
-        ",".join(tags)
-    ])
+        writer.writerow(["file_name", "departments", "semesters", "tags"])
+        writer.writerow([
+            file_name,
+            ",".join(departments),
+            ",".join(semesters),
+            ",".join(tags)
+        ])
 
 def homepage():
     st.write("Welcome to the PDF Upload and Management System!")
@@ -110,17 +114,21 @@ def upload_page():
                 new_name = st.session_state[f"name_{i}"]
                 new_file_name = f"{new_name}.pdf"
                 pdf_path = os.path.join(DOCUMENTS_DIR, new_file_name)
+                
+                # Reset file position and save the PDF
                 uploaded_file.seek(0)
                 save_to_local(uploaded_file, pdf_path)
                 st.success(f"File {new_file_name} saved locally.")
                 st.session_state.uploaded_files_session.append(new_file_name)
+                
+                # Save metadata
                 try:
                     save_metadata_csv(
-                            new_name,
-                            st.session_state[f"dept_{i}"],
-                            st.session_state[f"sem_{i}"],
+                        new_name,
+                        st.session_state[f"dept_{i}"],
+                        st.session_state[f"sem_{i}"],
                         st.session_state[f"tags_{i}"]
-                        )
+                    )
                     st.success(f"Metadata for {new_file_name} saved locally.")
                 except Exception as e:
                     st.error(f"Error saving metadata for {new_file_name}: {e}")
@@ -193,6 +201,84 @@ def edit_page():
     else:
         st.warning("No file selected.")
 
+def register_students_page():
+    st.write("### Register Students")
+    
+    # Single student registration
+    st.subheader("Register Single Student")
+    
+    # Initialize form data
+    if "form_data" not in st.session_state:
+        st.session_state.form_data = {
+            "roll_no": "",
+            "name": "",
+            "department": DEPARTMENTS[0],
+            "branch": "",
+            "semester": SEMESTERS[0]
+        }
+    
+    with st.form("register_student"):
+        roll_no = st.text_input("Roll Number", value=st.session_state.form_data["roll_no"])
+        name = st.text_input("Full Name", value=st.session_state.form_data["name"])
+        department = st.selectbox("Department", DEPARTMENTS, index=DEPARTMENTS.index(st.session_state.form_data["department"]))
+        branch = st.text_input("Branch", value=st.session_state.form_data["branch"])
+        semester = st.selectbox("Semester", SEMESTERS, index=SEMESTERS.index(st.session_state.form_data["semester"]))
+        
+        if st.form_submit_button("Register Student"):
+            if roll_no and name and department and branch and semester:
+                try:
+                    response = requests.post(
+                        "http://localhost:8000/auth/students/register",
+                        json={
+                            "roll_no": roll_no,
+                            "name": name,
+                            "department": department,
+                            "branch": branch,
+                            "semester": semester
+                        }
+                    )
+                    if response.status_code == 200:
+                        st.success(f"Student {name} registered successfully!")
+                        # Clear form data after successful registration
+                        st.session_state.form_data = {
+                            "roll_no": "",
+                            "name": "",
+                            "department": DEPARTMENTS[0],
+                            "branch": "",
+                            "semester": SEMESTERS[0]
+                        }
+                        st.rerun()  # Rerun to refresh the form
+                    else:
+                        try:
+                            st.error(f"Error: {response.json().get('detail', 'Unknown error')}")
+                        except Exception:
+                            st.error(f"Error: {response.text}")
+                except Exception as e:
+                    st.error(f"Error: {e}")
+            else:
+                st.error("Please fill all fields")
+    
+    # View all students
+    st.subheader("Registered Students")
+    try:
+        response = requests.get("http://localhost:8000/auth/students")
+        
+        if response.status_code == 200:
+            students = response.json().get("students", [])
+            if students:
+                for student in students:
+                    with st.expander(f"{student['name']} - {student['roll_no']}"):
+                        st.write(f"**Department:** {student['department']}")
+                        st.write(f"**Branch:** {student['branch']}")
+                        st.write(f"**Semester:** {student['semester']}")
+                        st.write(f"**Registered:** {student['created_at']}")
+            else:
+                st.info("No students registered yet.")
+        else:
+            st.error(f"Error fetching students: {response.text}")
+    except Exception as e:
+        st.error(f"Error: {e}")
+
 def update_knowledge_base_page():
     st.subheader("📚 Updating Knowledge Base")
     uploaded = st.session_state.get("uploaded_files_session", [])
@@ -203,33 +289,33 @@ def update_knowledge_base_page():
     st.write(f"**Deleted Files**: {deleted}")
     progress_bar = st.progress(0)
     if st.button("Run Update Now", key="run_update_btn"):
-    try:
-        import time
-        with st.spinner("Updating knowledge base..."):
-            progress_bar.progress(10)
-        response = requests.post(
-            "http://localhost:8000/update_knowledge_base",
-            json={
-                "new_files": uploaded,
-                "updated_files": edited,
-                "deleted_files": deleted
-            }
-        )
-        progress_bar.progress(90)
-        time.sleep(0.2)
-                
-        if response.status_code == 200:
-            st.success("✅ Knowledge base updated successfully!")
-            st.session_state.uploaded_files_session = []
-            st.session_state.edited_files_session = []
-            st.session_state.deleted_files_session = []
-            progress_bar.progress(100)
-        else:
-            st.error(f"Error updating knowledge base: {response.text}")
+        try:
+            import time
+            with st.spinner("Updating knowledge base..."):
+                progress_bar.progress(10)
+                response = requests.post(
+                    "http://localhost:8000/update_knowledge_base",
+                    json={
+                        "new_files": uploaded,
+                        "updated_files": edited,
+                        "deleted_files": deleted
+                    }
+                )
+                progress_bar.progress(90)
+                time.sleep(0.2)
+                        
+                if response.status_code == 200:
+                    st.success("✅ Knowledge base updated successfully!")
+                    st.session_state.uploaded_files_session = []
+                    st.session_state.edited_files_session = []
+                    st.session_state.deleted_files_session = []
+                    progress_bar.progress(100)
+                else:
+                    st.error(f"Error updating knowledge base: {response.text}")
+                    progress_bar.progress(0)
+        except Exception as e:
+            st.error(f"Error connecting to FastAPI server: {e}")
             progress_bar.progress(0)
-    except Exception as e:
-        st.error(f"Error connecting to FastAPI server: {e}")
-        progress_bar.progress(0)
 
 if st.session_state.page == "Home":
     homepage()
@@ -237,6 +323,8 @@ elif st.session_state.page == "Upload Files":
     upload_page()
 elif st.session_state.page == "Edit Existing Files":
     edit_page()
+elif st.session_state.page == "Register Students":
+    register_students_page()
 elif st.session_state.page == "Update Knowledge Base":
     update_knowledge_base_page()
 

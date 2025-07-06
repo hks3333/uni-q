@@ -25,9 +25,9 @@ export default function ResearchPlan({ plan, onPlanRefine, onExecute }) {
 
   return (
     <div className="research-plan">
-      <div className="flex justify-between items-center mb-4">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h3>Research Plan</h3>
-        <div className="flex gap-2">
+        <div style={{ display: 'flex', gap: '0.5rem' }}>
           {!isEditing ? (
             <>
               <button onClick={handleEdit} className="btn-secondary">
@@ -50,10 +50,10 @@ export default function ResearchPlan({ plan, onPlanRefine, onExecute }) {
         </div>
       </div>
 
-      <div className="space-y-4">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
         <div>
           <h4>Research Objectives</h4>
-          <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+          <ul style={{ listStyle: 'disc inside', display: 'flex', flexDirection: 'column', gap: '0.25rem', fontSize: '0.875rem', color: 'var(--text-muted)' }}>
             {safePlan.objectives.map((objective, index) => (
               <li key={index}>{objective}</li>
             ))}
@@ -62,11 +62,11 @@ export default function ResearchPlan({ plan, onPlanRefine, onExecute }) {
 
         <div>
           <h4>Search Strategy</h4>
-          <div className="space-y-2">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
             {safePlan.search_queries.map((query, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <span className="text-sm text-gray-400">Step {index + 1}:</span>
-                <span className="text-sm bg-gray-100 text-gray-800 px-2 py-1 rounded">
+              <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ fontSize: '0.875rem', color: 'var(--text-muted)' }}>Step {index + 1}:</span>
+                <span style={{ fontSize: '0.875rem', background: 'var(--pastel-blue)', color: 'var(--text-primary)', padding: '0.25rem 0.5rem', borderRadius: 'var(--border-radius-small)' }}>
                   {query}
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function ResearchPlan({ plan, onPlanRefine, onExecute }) {
 
         <div>
           <h4>Information Sources</h4>
-          <div className="flex flex-wrap gap-2">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
             {safePlan.sources.map((source, index) => (
               <span key={index} className="tag">
                 {source}
@@ -87,7 +87,7 @@ export default function ResearchPlan({ plan, onPlanRefine, onExecute }) {
 
         <div>
           <h4>Analysis Framework</h4>
-          <ul className="list-disc list-inside space-y-1 text-sm text-gray-600">
+          <ul style={{ listStyle: 'disc inside', display: 'flex', flexDirection: 'column', gap: '0.25rem', fontSize: '0.875rem', color: 'var(--text-muted)' }}>
             {safePlan.analysis_framework.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
